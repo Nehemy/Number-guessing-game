@@ -26,6 +26,7 @@ def play_game():
         guess()
 
     game_on = True
+
     while game_on:
 
         if guessed_number == number:
