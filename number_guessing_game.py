@@ -25,8 +25,6 @@ def play_game():
         print(f"You have {attempts} attempts remaining to guess the number.")
         guess()
 
-    game_on = True
-
     while guessed_number != number:
 
         if guessed_number == number:
