@@ -10,7 +10,7 @@ def guess():
     guessed_number = int(input("Make a guess: "))
 
 def play_game():
-
+    global number
     global attempts
     print(logo)
     print("Welcome to the Number Guessing Game! \nI'm thinking of a number between 1 and 100.")
@@ -22,7 +22,7 @@ def play_game():
         guess()
     else:
         attempts += 10
-        print("You have 10 attempts remaining to guess the number.")
+        print(f"You have {attempts} attempts remaining to guess the number.")
         guess()
 
     game_on = True
@@ -49,6 +49,6 @@ def play_game():
                 game_on = False
             else:
                 print(f"Too low \nGuess again. \nYou have {attempts} attempts remaining to guess the number.")
-            guess()
+                guess()
 
 play_game()
