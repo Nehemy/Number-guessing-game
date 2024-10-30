@@ -27,26 +27,26 @@ def play_game():
 
     game_on = True
 
-    while game_on:
+    while guessed_number != number:
 
         if guessed_number == number:
             print(f"You got it! The answer was {number}.")
-            game_on = False
+            return
 
-        elif guessed_number != number and guessed_number > number:
+        elif guessed_number > number:
             attempts -= 1
             if attempts == 0:
                 print("You've run out of guesses. Refresh the page to run again.")
-                game_on = False
+                return
             else:
                 print(f"Too high \nGuess again. \nYou have {attempts} attempts remaining to guess the number.")
             guess()
 
-        elif guessed_number != number and guessed_number < number:
+        elif guessed_number < number:
             attempts -= 1
             if attempts == 0:
                 print("You've run out of guesses. Refresh the page to run again.")
-                game_on = False
+                return
             else:
                 print(f"Too low \nGuess again. \nYou have {attempts} attempts remaining to guess the number.")
                 guess()
